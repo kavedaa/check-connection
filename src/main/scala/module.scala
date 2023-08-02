@@ -7,7 +7,7 @@ import javafx.scene.layout.*
 import javafx.scene.control.*
 
 import org.sphix.*
-import org.sphix.derivation.form.Editor
+import org.sphix.ui.editor.*
 
 import org.shaqal._
 import org.shaqal.jtds.JtdsFactory
@@ -48,7 +48,7 @@ class ConnectionPane extends BorderPane with FormUtils:
   val content =
     vbox(
       hbox(
-        editor.container(Some("Connection properties")).layout,
+        editor.container(Some("Connection properties")).layout(false),
         tools
       ),
       buttonBar
